@@ -1,0 +1,3 @@
+CMU-DCL56;Hydrocarbon.java;7;METHOD_INVOCATION;java.lang.Enum:ordinal()
+CMU-DCL56;Colour.java;10;METHOD_INVOCATION;java.lang.Enum:ordinal()
+CMU-DCL56;Colour.java;14;METHOD_INVOCATION;java.lang.Enum:ordinal()
