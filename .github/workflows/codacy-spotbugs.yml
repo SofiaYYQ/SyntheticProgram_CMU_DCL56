@@ -27,6 +27,3 @@ jobs:
           tool: spotbugs
           upload: true
           api-token: ${{ secrets.CODACY_API_TOKEN }}
-          provider: gh
-          username: SofiaYYQ
-          project: SyntheticProgram_CMU_DCL56
