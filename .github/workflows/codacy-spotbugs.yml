@@ -1,0 +1,32 @@
+name: Codacy SpotBugs Analysis
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  spotbugs:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '22'
+          distribution: 'temurin'
+
+      - name: Compile project
+        run: mvn compile -B
+
+      - name: Run Codacy SpotBugs
+        uses: codacy/codacy-analysis-cli-action@master
+        with:
+          tool: spotbugs
+          upload: true
+          api-token: ${{ secrets.CODACY_API_TOKEN }}
+          provider: gh
+          username: SofiaYYQ
+          project: SyntheticProgram_CMU_DCL56
